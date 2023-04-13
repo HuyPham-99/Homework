@@ -7,7 +7,7 @@
 /***********Slave**************/
 #include <Wire.h>
 
-#define LED2 13 //Led of slave
+#define LED2 4 //Led of slave
 
 #define slaveAddress 9 //Address of slave
 

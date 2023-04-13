@@ -9,7 +9,7 @@
 
 //Assign macros to Arduno pins to make the code explicit
 #define push 5 //Button
-#define LED1  12 //Led of master
+#define LED1  4 //Led of master
 #define slaveAddress 9 //Address of slave
 
 int buttonState = 0; // variable for reading the pushbutton status
@@ -17,11 +17,11 @@ int buttonState = 0; // variable for reading the pushbutton status
 //Function set up 
 void setup()
 {
-  Wire.begin(); // join i2c bus (address optional for master)
+  Serial.begin( 9600 ); // start serial for output
 
   pinMode(push, INPUT);
 
-  Serial.begin( 9600 ); // start serial for output
+  Wire.begin(); // join i2c bus (address optional for master) 
 }
 
 //Function main of program
@@ -52,5 +52,5 @@ void loop()
 
   Wire.endTransmission();//End of transmission
 
-  delay(200);
+  delay(100);
 }
