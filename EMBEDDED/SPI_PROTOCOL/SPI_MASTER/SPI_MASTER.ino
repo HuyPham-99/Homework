@@ -1,10 +1,11 @@
 
 /*
- * File: SPI_MASTER.ino
+ * File: SPI_MASTER.cpp
  * Author: Hung Huy
  * Date: 4/13/2023
  * Description: Chương trình master SPI Arduino
  */
+
 /***********Master**************/
 #include <Arduino.h>
 
@@ -122,8 +123,6 @@ void SPI_setup(void)
     BUTTON_INPUT;
 
     LED_OUTPUT;
-
-    delay(1);
 }
 
 /*
@@ -221,13 +220,12 @@ void loop(){
 
     byte m_send, m_receive;//Data truyền và data nhận
 
-    SPI_begin();
-
     vallue = READ_BUTTON;
 
-    SS_LOW;
-
     m_send = vallue;
+
+    SPI_begin();
+
     m_receive = SPI_transfer(m_send);
 
     if (m_receive == 1){
