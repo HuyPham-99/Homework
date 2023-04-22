@@ -1002,13 +1002,13 @@ void runMenuOfResTaurant()
 
                     DOWHILE_METHODMENU
                     (
-                        
                         Maneger.addOfDishes();
 
                         printf("\nTHEM THONG TIN CHO MON AN THANH CONG!\n"); 
 
-                        printf("\n- Nhan phim '1' => De tiep tuc chuc nang\n");
-                    );        
+                        system("Pause");
+                    );  
+                      
                 break;
 
                 case editorDeredFood:
@@ -1022,7 +1022,7 @@ void runMenuOfResTaurant()
 
                         printf("\nCAP NHAT THONG TIN CHO MON AN THANH CONG!\n"); 
 
-                        printf("\n- Nhan phim '1' => De tiep tuc chuc nang\n");
+                        system("Pause");
                     );        
                 break;
 
@@ -1036,8 +1036,6 @@ void runMenuOfResTaurant()
                         Maneger.earesOfDishes();
 
                         printf("\nXOA MON AN THANH CONG!\n"); 
-
-                        printf("\n- Nhan phim '1' => De tiep tuc chuc nang\n");
                     );  
                 break;
 
@@ -1046,10 +1044,7 @@ void runMenuOfResTaurant()
 
                     DOWHILE_METHODMENU
                     (
-                        
                         Maneger.displayOfDishes();
-
-                        printf("\n- Nhan phim '1' => De tiep tuc chuc nang\n");
                     );        
                 break;    
 
@@ -1069,10 +1064,14 @@ void runMenuOfResTaurant()
 
                         printf("\nDAT SO LUONG BAN THANH CONG!\n"); 
 
+                        system("Pause");
                     );  
                 break;
                 staff.getDataFromManager(&Maneger); //Lấy data của Manager copy sang staff
-
+                
+                case returnMenu:
+                break;
+                
                 default:
                 printf("Yeu cau khong ton tai\n");
                 printf("Vui long nhap yeu cau tu (1 - 6)\n");
